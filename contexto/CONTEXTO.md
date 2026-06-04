@@ -84,3 +84,33 @@ Basado en ventas de los últimos **30 días** por producto:
 
 ## Estado de avance
 Ver `AVANCE.md` (siguiente paso).
+
+## Estado actual de despliegue (sesión 2 - 2026-06-04)
+
+| Componente | Estado | Detalle |
+|---|---|---|
+| **Repo local** | ✅ Listo | `C:\Users\JONAT\OneDrive\Desktop\mili\dev\sistema administrativo de bodegas\` con `.git` inicializado |
+| **GitHub repo** | ✅ Pusheado | `https://github.com/militian007/sistema-bodega3` (público, branch `main`) |
+| **Supabase proyecto** | ✅ Activo | ID: `bozdegjwrqzanrvndsbl`, región: `us-east-2`, plan: Free |
+| **Supabase URL** | ✅ Resuelve | `https://bozdegjwrqzanrvndsbl.supabase.co` (DNS OK) |
+| **Schema SQL** | ✅ Corridо | 12 tablas + triggers + RLS + vistas — todas operativas |
+| **Auth admin** | ✅ Listo | `jpdevslayer@hotmail.com` / `gamer00*7`, rol: `admin` |
+| **App local** | ✅ Login funciona | `http://localhost:5173` carga dashboard con todos los módulos |
+| **Despliegue Vercel** | ⏳ Pendiente | Cuando el usuario lo pida, ver pasos en AVANCE.md |
+| **Datos de prueba** | ⏳ Pendiente | Aún no se ha creado ningún producto/cliente/venta |
+
+## Credenciales y secretos
+
+**NO** están en el repo. `.gitignore` excluye `app/.env`.
+
+| Dato | Dónde está |
+|---|---|
+| `VITE_SUPABASE_URL` | `app/.env` (línea 1) y en Supabase Dashboard → Settings → API → Project URL |
+| `VITE_SUPABASE_ANON_KEY` | `app/.env` (línea 2) y en Supabase Dashboard → Settings → API → anon public key |
+| `database password` | Solo en Supabase Dashboard → Settings → Database (no se usa en el front) |
+| `admin password` (`gamer00*7`) | Solo en Supabase Auth (no en código). Se puede reset desde Dashboard → Auth → Users |
+
+## Lecciones operativas (referencia rápida)
+- **Supabase DNS roto = borrar y recrear** (no esperar). Verificar siempre con `nslookup <id>.supabase.co 8.8.8.8` antes de seguir.
+- **GitHub Desktop falla con paths con espacios** → usar terminal directo.
+- **Antes de borrar un proyecto Supabase:** sacar URL + anon key + correr GRANTs y migración de admin.
