@@ -115,6 +115,7 @@
 ### LECCIONES APRENDIDAS (sesión 3.5)
 - **Vercel quirk:** si cambiás Root Directory y después intentás setear Application Preset, se deshabilita. Workaround: PRIMERO seleccionar Vite, DESPUÉS cambiar Root Directory.
 - **Screenshots de apps en producción con puppeteer:** instalar en un temp dir (`C:\Users\JONAT\AppData\Local\Temp\opencode\screenshot`), escribir script de 30 líneas, listo. Funciona con login automático (autofill + submit + waitForNavigation).
+- **Multi-screenshot en una sola corrida:** un solo script que hace goto+login una vez, después navega a N rutas y hace screenshot. Mucho más rápido que correr N veces. Commit: `18820c2` con 4 capturas extra (inventario, productos, ventas, importar).
 
 ## Sesión 3 — 2026-06-05
 ### HECHO
