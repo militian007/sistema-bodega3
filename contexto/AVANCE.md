@@ -89,11 +89,11 @@
 - [ ] **Combos Waku** (preparar combos restando varios productos del stock)
 
 ## Plan para Sesión 4 (próxima)
-- [ ] Usuario pasa Fina file actualizado con stock de hoy
-- [ ] Usuario pasa ventas del mes (en cuaderno o fotos) para backfill día a día
-- [ ] Yo regenero la plantilla con catálogo actualizado
-- [ ] Empezamos el día a día: 1 Excel por día → Importar Ventas → revisión
-- [ ] Decidir opción (A/B/C) de qué hacer con Fina file actualizado al llegar
+- [ ] **NO backfill del mes.** Arrancamos desde hoy.
+- [ ] Usuario pasa la **actualización más fresca de Fina** (stock de hoy)
+- [ ] Yo regenero la plantilla con el catálogo actualizado
+- [ ] **Estrategia:** la carga masiva de Fina sobrescribe catálogo+stock (espejo de Fina → fuente de verdad)
+- [ ] A partir de ahí: 1 Excel por día → Importar Ventas → revisión
 - [ ] Cambiar placeholders `123456` de vendedor y administradora a passwords reales
 - [ ] Ir viendo día a día qué falta / qué mejorar
 
