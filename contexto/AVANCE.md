@@ -88,6 +88,15 @@
 - [ ] **Recepción de transferencias/cambios de divisas** (divisas)
 - [ ] **Combos Waku** (preparar combos restando varios productos del stock)
 
+## Plan para Sesión 4 (próxima)
+- [ ] Usuario pasa Fina file actualizado con stock de hoy
+- [ ] Usuario pasa ventas del mes (en cuaderno o fotos) para backfill día a día
+- [ ] Yo regenero la plantilla con catálogo actualizado
+- [ ] Empezamos el día a día: 1 Excel por día → Importar Ventas → revisión
+- [ ] Decidir opción (A/B/C) de qué hacer con Fina file actualizado al llegar
+- [ ] Cambiar placeholders `123456` de vendedor y administradora a passwords reales
+- [ ] Ir viendo día a día qué falta / qué mejorar
+
 ## Sesión 3 — 2026-06-05
 ### HECHO
 - [x] **Carga masiva de inventario desde Fina** (`registros_de_inventario_2026_06_04.xlsx`, 478 productos):
