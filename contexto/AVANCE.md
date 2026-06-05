@@ -97,6 +97,25 @@
 - [ ] Cambiar placeholders `123456` de vendedor y administradora a passwords reales
 - [ ] Ir viendo día a día qué falta / qué mejorar
 
+## Sesión 3.5 — 2026-06-05 (continuación, mismo día)
+### HECHO
+- [x] **Deploy a Vercel** exitoso:
+  - Proyecto: `sistema-bodega3`
+  - Framework: Vite (Root Directory = `app`)
+  - Env vars: `VITE_SUPABASE_URL` + `VITE_SUPABASE_ANON_KEY` (Production & Preview)
+  - URL: `https://sistema-bodega3.vercel.app` (live, login funciona con las 3 cuentas)
+  - Auto-deploy: cada push a `main` regenera
+- [x] **Agregado al portafolio** (`jpdevslayer-portfolio-militian007`):
+  - Nueva card "BODEGA-3 SISTEMA ADMINISTRATIVO" en la sección WEB, entre SIGMA y NEXUS, como featured project
+  - Screenshot real del dashboard (`assets/bodega_1.png`, capturado con puppeteer) y del login (`assets/bodega_2.png`)
+  - Modal con 6 features detalladas, 11 techs, 2 imágenes
+  - Commit: `ba5fd47` en `jpdevslayer-portfolio-militian007/main` (pushed)
+  - **Vercel auto-redeploy en 1-2 min** en `https://jpdevslayer-portfolio-militian007.vercel.app/`
+
+### LECCIONES APRENDIDAS (sesión 3.5)
+- **Vercel quirk:** si cambiás Root Directory y después intentás setear Application Preset, se deshabilita. Workaround: PRIMERO seleccionar Vite, DESPUÉS cambiar Root Directory.
+- **Screenshots de apps en producción con puppeteer:** instalar en un temp dir (`C:\Users\JONAT\AppData\Local\Temp\opencode\screenshot`), escribir script de 30 líneas, listo. Funciona con login automático (autofill + submit + waitForNavigation).
+
 ## Sesión 3 — 2026-06-05
 ### HECHO
 - [x] **Carga masiva de inventario desde Fina** (`registros_de_inventario_2026_06_04.xlsx`, 478 productos):
@@ -165,8 +184,9 @@
 ## Cómo retomar
 1. Abrir `app/` y correr `npm install` (si no está ya)
 2. Las credenciales ya están en `app/.env` (NO en git). Si se pierde, sacarlas de Supabase Dashboard → Settings → API.
-3. `npm run dev` desde `app/` → `http://localhost:5173`
+3. `npm run dev` desde `app/` → `http://localhost:5173` (local) o `https://sistema-bodega3.vercel.app` (producción)
 4. Login admin: `jpdevslayer@hotmail.com` / `gamer00*7`
 5. Login vendedor: `vendedor@bodega.local` / `123456` (cambiar antes de prod)
 6. Login administradora: `admin@bodega.local` / `123456` (cambiar antes de prod)
-7. Vercel: importar `militian007/sistema-bodega3` con root `app/` y env vars del `.env`
+7. Repo GitHub: `https://github.com/militian007/sistema-bodega3` (público, branch `main`)
+8. Portfolio: `https://jpdevslayer-portfolio-militian007.vercel.app/` (auto-deploy desde `militian007/jpdevslayer-portfolio-militian007`)
