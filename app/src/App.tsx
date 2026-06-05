@@ -12,6 +12,7 @@ import Compras from './pages/Compras';
 import CuentasCobrar from './pages/CuentasCobrar';
 import CuentasPagar from './pages/CuentasPagar';
 import Configuracion from './pages/Configuracion';
+import ImportarVentas from './pages/ImportarVentas';
 import ProtectedRoute from './components/ProtectedRoute';
 import { isSupabaseConfigured } from './lib/supabase';
 
@@ -65,6 +66,7 @@ function App() {
         <Route path="/compras" element={<Compras />} />
         <Route path="/cuentas-cobrar" element={<CuentasCobrar />} />
         <Route path="/cuentas-pagar" element={<CuentasPagar />} />
+        <Route path="/importar-ventas" element={<ImportarVentas />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

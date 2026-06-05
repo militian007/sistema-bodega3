@@ -12,6 +12,7 @@ import {
   HandCoins,
   LogOut,
   Settings,
+  FileSpreadsheet,
 } from 'lucide-react';
 
 const NAV = [
@@ -19,6 +20,7 @@ const NAV = [
   { to: '/inventario', label: 'Inventario', icon: Boxes, admin: false },
   { to: '/productos', label: 'Productos', icon: Package, admin: false },
   { to: '/ventas', label: 'Ventas', icon: ShoppingCart, admin: false },
+  { to: '/importar-ventas', label: 'Importar Ventas', icon: FileSpreadsheet, admin: false },
   { to: '/compras', label: 'Compras', icon: Receipt, admin: false },
   { to: '/cuentas-cobrar', label: 'Cuentas por Cobrar', icon: HandCoins, admin: false },
   { to: '/cuentas-pagar', label: 'Cuentas por Pagar', icon: Wallet, admin: false },
